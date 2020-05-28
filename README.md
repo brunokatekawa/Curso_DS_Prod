@@ -2,16 +2,16 @@
 ---
 
 ## Table of contents
-- [Module 01. Understanding the business problem](##Module-01.-Understanding-the-business-problem)
+- [Module 01. Understanding the business problem](#module-01-understanding-the-business-problem)
 
-- [Module 02. Data description](##Module-02.-Data-description)
+- [Module 02. Data description](#module-02-data-description)
 
-- [Module 03. Feature Engineering](##Module-03.-Feature-Engineering)
+- [Module 03. Feature Engineering](#module-03-feature-engineering)
 
-- [Module 04. Exploratory Data Analysis (EDA)](##Module-04.-Exploratory-Data-Analysis-(EDA))
-  - [4.1 Univariate analysis](###4.1-Univariate-analysis)
-  - [4.2 Bivariate analysis](###4.2-Bivariate-analysis)
-  - [4.3 Multivariate analysis](###4.3-Multivariate-analysis)
+- [Module 04. Exploratory Data Analysis (EDA)](#module-04-exploratory-data-analysis-eda)
+  - [4.1 Univariate analysis](#41-univariate-analysis)
+  - [4.2 Bivariate analysis](#42-bivariate-analysis)
+  - [4.3 Multivariate analysis](#43-multivariate-analysis)
 
 ---
 
@@ -52,6 +52,8 @@ In addition, we get to learn **CRISP-DS (CRoss-Industry Process - Data Science)*
 
 ### Solution statement
 > *We can use time series do predict the sales for each store in the next 42 days (six weeks).*
+
+[back to top](#table-of-contents)
 
 ---
 
