@@ -42,7 +42,7 @@ In addition, we get to learn **CRISP-DS (CRoss-Industry Process - Data Science)*
 ---
 
 ## Module 02 - Data description
-In this module, we start getting familiar with the dataset to **understand how complex** is the problema that we are trying to solve.
+In this module, we start getting familiar with the dataset to **understand how complex** is the problem that we are trying to solve.
 
 **Key points:**
 - Know the dataset size:
@@ -71,7 +71,7 @@ In this module, we start getting familiar with the dataset to **understand how c
 ---
 
 ## Module 03 - Feature Engineering
-In this module, we learn how to create a mindmap that helps to decide which variables we need in order to validate the hypotheses and do the feature engineering. This helps in the Exploratory Data Analysis (EDA) phase.
+In this module, we learn how to create a mindmap that helps us to **decide which variables we need** in order to validate the hypotheses and do the feature engineering. This helps in the Exploratory Data Analysis (EDA) phase.
 
 **Key points:**
 - Identify the target:
@@ -91,6 +91,43 @@ In this module, we learn how to create a mindmap that helps to decide which vari
 
 - Variable filtering and variable selection:
   - Both need to be done before EDA.
+
   - **Variable filtering:** it is constrained to the Business. There are variables which values you will only be able to have when a business rule is triggered in the system. So, your model will not always be able to use them at hand to make predictions.
+
   - **Variable selection:** picking the most relevant variables for the model. Considers the correlations between variables. It does not take into account business rules.
   
+---
+
+## Module 04 - Exploratory Data Analysis (EDA)
+In this module, we get to learn a lot of awesome stuff about EDA. We start to identify how the explanatory variables impact the target variable (`sales`) and what is the power of this impact. Thus, by identifying this impact we can decide to choose the right variables for our model, so it can be more assertive.
+
+**Key points**
+- The 3 goals of EDA:
+  - **Understand how the business works** and how it behaves through the data.
+  - **Validate/Invalidate hypotheses** and provide new information to other people.
+  - **Identify which explanatory variables** impacts the target variable.
+
+- The 3 types of EDA:
+  - **Univariate analysis.**
+    - How is this variable?
+    - Get summary statistics (min, max, distribution, range, etc.)
+
+  - **Bivariate analysis.**
+    - How the explanatory variable impacts the target variable?
+    - Get correlation between them.
+    - Validate / Invalidate hypotheses.
+
+  - **Multivariate analysis.**
+    - How is the relation between the explanatory variables?
+    - Get correlation between them.
+
+### 4.1 Univariate analysis
+#### 4.1.1 Target variable (`sales`)
+![](img/411_target_variable_distrib.png)
+
+#### 4.1.2 Numerical variables
+![](img/412_numerical_variables_hist.png)
+
+### 4.1.3 Categorical variable
+![](img/413_categorical_variables.png)
+
