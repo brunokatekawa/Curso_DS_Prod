@@ -84,6 +84,8 @@ In this module, we start getting familiar with the dataset to **understand how c
   
   ![](img/box_plot.png)
 
+[back to top](#table-of-contents)
+
 ---
 
 ## Module 03. Feature Engineering
@@ -111,7 +113,9 @@ In this module, we learn how to create a mindmap that helps us to **decide which
   - **Variable filtering:** it is constrained to the Business. There are variables which values you will only be able to have when a business rule is triggered in the system. So, your model will not always be able to use them at hand to make predictions.
 
   - **Variable selection:** picking the most relevant variables for the model. Considers the correlations between variables. It does not take into account business rules.
-  
+
+[back to top](#table-of-contents)
+
 ---
 
 ## Module 04. Exploratory Data Analysis (EDA)
@@ -190,6 +194,8 @@ Analyzing the plots, we can see that:
 - For the stores of type `a`, `c` and `d` there is a high concentration of sales around $6,000. In addition, for the stores of type `b` the volume of sales is lower and its value range is much more distributed. As the provided dataset does not clearly describe the difference between the store types, it is not possible to knows whats could be generating these differences.
 
 - For the assortment type `extended`, `basic` there is a high concentration of sales around $6,000. In addition, for the assortment `extra` the volume of sales is lower and its value range is much more distributed. This might be due the assortment of products each store have in stock and on sale which impacts the volume of sales.
+
+[back to top](#table-of-contents)
 
 <br>
 
@@ -394,6 +400,10 @@ As observed in the previous results, in general, stores **have lesser sales duri
 | H11 | True | High |
 | H12 | True | Low |
 
+[back to top](#table-of-contents)
+
+<br>
+
 ### 4.3 Multivariate analysis
 In this section we'll check the correlations between the explanatory variables, separating the analysis for **numerical attributes** and **categorical attributes**.
 
@@ -422,3 +432,5 @@ Please, refer to the notebook to check the calculations.
 ![](img/432_categorical_att_corr.png)
 
 As observed in the results, the correlation coefficient between `store_type` and `assortment` is `0.54` which is a medium correlation and makes sense, as the bigger the store, the higher is the assortment of its products.
+
+[back to top](#table-of-contents)
