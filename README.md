@@ -1,6 +1,20 @@
 # Data Science in Production course
 ---
 
+## Table of contents
+- [Module 01. Understanding the business problem](##Module-01.-Understanding-the-business-problem)
+
+- [Module 02. Data description](##Module-02.-Data-description)
+
+- [Module 03. Feature Engineering](##Module-03.-Feature-Engineering)
+
+- [Module 04. Exploratory Data Analysis (EDA)](##Module-04.-Exploratory-Data-Analysis-(EDA))
+  - [4.1 Univariate analysis](###4.1-Univariate-analysis)
+  - [4.2 Bivariate analysis](###4.2-Bivariate-analysis)
+  - [4.3 Multivariate analysis](###4.3-Multivariate-analysis)
+
+---
+
 ## Introduction
 This is a journal-like write up to register the progress of my journey through the course. But wait, what is the "Data Science in Production" course?
 
@@ -15,7 +29,7 @@ In this course, we use the [Rossmann Store Sales](https://www.kaggle.com/c/rossm
 
 ---
 
-## Module 01 - Understanding the business problem
+## Module 01. Understanding the business problem
 In this module, we get to understand how important is to first understand the business as a whole and find the root cause of the problem that the stakeholder want us to solve.
 
 **Key points:**
@@ -41,7 +55,7 @@ In addition, we get to learn **CRISP-DS (CRoss-Industry Process - Data Science)*
 
 ---
 
-## Module 02 - Data description
+## Module 02. Data description
 In this module, we start getting familiar with the dataset to **understand how complex** is the problem that we are trying to solve.
 
 **Key points:**
@@ -70,7 +84,7 @@ In this module, we start getting familiar with the dataset to **understand how c
 
 ---
 
-## Module 03 - Feature Engineering
+## Module 03. Feature Engineering
 In this module, we learn how to create a mindmap that helps us to **decide which variables we need** in order to validate the hypotheses and do the feature engineering. This helps in the Exploratory Data Analysis (EDA) phase.
 
 **Key points:**
@@ -98,7 +112,7 @@ In this module, we learn how to create a mindmap that helps us to **decide which
   
 ---
 
-## Module 04 - Exploratory Data Analysis (EDA)
+## Module 04. Exploratory Data Analysis (EDA)
 In this module, we get to learn a lot of awesome stuff about EDA. We start to identify how the explanatory variables impact the target variable (`sales`) and what is the power of this impact. Thus, by identifying this impact we can decide to choose the right variables for our model, so it can be more assertive.
 
 **Key points**
@@ -397,7 +411,7 @@ As observed in the matrix:
 | `open` | `customer` | Strong |
 
 
-#### 4.3.2 Numerical Attributes
+#### 4.3.2 Categorical Attributes
 
 To make the correlation between two categorical variables, we'll use the [Cramér V method](https://en.wikipedia.org/wiki/Cram%C3%A9r%27s_V).
 
