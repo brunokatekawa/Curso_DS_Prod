@@ -434,3 +434,117 @@ Please, refer to the notebook to check the calculations.
 As observed in the results, the correlation coefficient between `store_type` and `assortment` is `0.54` which is a medium correlation and makes sense, as the bigger the store, the higher is the assortment of its products.
 
 [back to top](#table-of-contents)
+
+---
+
+## Module 05. Data Preparation
+In this module, we get to learn how to make data preparation to model our data for the ML training, as the most ML algorithms takes advantages of **numerical data**.
+
+**Key points:**
+
+- There are 3 types of data preparation:
+  1. **Normalization:** rescales the center to 0 with standard deviation equal to 1.  It is usually applied to data that is Normally distributed.
+
+  2. **Rescaling:** rescales the data to the interval from 0 to 1. It is usually applied to data that are non-Normally distributed. We can use two techniques for this type.
+      
+      - **Min-Max Scaler:** uses the data range.
+      - **Robust Scaler:** uses the data IQR.
+
+  3. **Transformation:** transforms the data through encoding, magnitude or nature.
+      - **Encoding:** we need to identify which values does a categorical value has. Much of this work was done at EDA phase. In addition, there are several types os encoding, such as: One Hot Encoding, Label Encoding, Ordinal Encoding, Target Encoding, Frequency Encoding, Embedding Encoding.
+
+      - **Magnitude:** the purpose is to bring the data distribution as closer as possible to a Normal distribution. We can apply some techniques, such as: Logarithm, Box-Cox, Cube-Root, Square-Root, Sine and Cosine.
+
+      - **Nature:** the purpose of it is to bring the number nature of a set of data. It works well with cyclic variables (e.g months, days of week, week of year, etc).
+
+For more info about **Scale, Standardize or Normalize with scikit-learn**, please, check this awesome article: https://www.kaggle.com/discdiver/guide-to-scaling-and-standardizing
+
+<br>
+
+### 5.1 Normalization
+We need to check the variables distributions. So, we check the distributions from section **4.1.2 Numerical variable**.
+
+![](img/412_numerical_variables_hist.png)
+
+As we can observe, there is no variable presenting a normal distribution, note even nearly normal. So, it is preferred to leave as it is than to risk a erroneous normalization.
+
+
+[back to top](#table-of-contents)
+
+<br>
+
+### 5.2 Rescaling
+#### 5.2.1 Rescaling `competition_distance`
+
+![](img/521_comp_dist_boxplot.png)
+
+As observed in the results, there is a clear presence of outliers.
+
+**Data after rescaling**
+
+Here, I used the [sklearn.preprocessing.RobustScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.RobustScaler.html?highlight=robustscaler#sklearn.preprocessing.RobustScaler) because of the presence of strong outliers.
+
+![](img/521_comp_dist_table.png)
+
+<br>
+
+#### 5.2.2 Rescaling `competition_time_month`
+
+![](img/522_comp_time_month_boxplot.png)
+
+As observed in the results, there is a clear presence of outliers.
+
+**Data after rescaling**
+
+Here, I used the [sklearn.preprocessing.RobustScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.RobustScaler.html?highlight=robustscaler#sklearn.preprocessing.RobustScaler) because of the presence of strong outliers.
+
+![](img/522_comp_time_month_table.png)
+
+<br>
+
+#### 5.2.3 Rescaling `promo_time_week`
+
+![](img/523_promo_time_week_boxplot.png)
+
+As observed in the results, there is a clear presence of outliers.
+
+**Data after rescaling**
+
+Here, I used the [sklearn.preprocessing.MinMaxScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html?highlight=sklearn%20preprocessing%20minmaxscaler) despite the presence of outliers, they are not that far from the superior whisker. So we can take a chance to use the Min-Max Scaler.
+
+![](img/523_promo_time_week_table.png)
+
+
+[back to top](#table-of-contents)
+
+<br>
+
+### 5.3 Transformation
+#### 5.3.1 Encoding
+##### 5.3.1.1 One Hot Encoding for `state_holiday`
+
+![](img/5311_one_hot_state_holiday.png)
+
+
+##### 5.3.1.2 Label Encoding for `store_type`
+
+![](img/5312_label_state_holiday.png)
+
+
+##### 5.3.1.3 Label Encoding for `assortment`
+
+![](img/5313_label_assortment.png)
+
+
+#### 5.3.2 Target Variable Transformation
+In this section, I applied the logarithm transformation to the `sales` target variable.
+
+![](img/532_target_var_transf.png)
+
+
+#### 5.3.3 Nature Transformation
+
+![](img/533_nature_transf.png)
+
+
+[back to top](#table-of-contents)
