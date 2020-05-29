@@ -13,6 +13,11 @@
   - [4.2 Bivariate analysis](#42-bivariate-analysis)
   - [4.3 Multivariate analysis](#43-multivariate-analysis)
 
+- [Module 05. Data Preparation](#module-05-data-preparation)
+  - [5.1 Normalization](#51-normalization)
+  - [5.2 Rescaling](#52-rescaling)
+  - [5.3 Transformation](#53-transformation)
+
 ---
 
 ## Introduction
