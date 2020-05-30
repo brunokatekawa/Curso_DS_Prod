@@ -18,6 +18,8 @@
   - [5.2 Rescaling](#52-rescaling)
   - [5.3 Transformation](#53-transformation)
 
+- [Module 06. Feature Selection](#module-06-feature-selection)
+
 ---
 
 ## Introduction
@@ -551,5 +553,95 @@ In this section, I applied the logarithm transformation to the `sales` target va
 
 ![](img/533_nature_transf.png)
 
+
+[back to top](#table-of-contents)
+
+<br>
+
+---
+
+## Module 06. Feature selection
+In this module, we get to learn why doing feature selection is important and how to select the most relevant features for ou ML model through the usage of algorithms.
+
+As follows on **Occam's Razor:**
+
+> "*Entities should not be multiplied without necessity.*"
+> "*Plurality is not to be posited without necessity*"
+
+It is variously paraphrased by statements like "the simplest solution is most likely the right one".
+
+If you want to know more about it check:
+https://en.wikipedia.org/wiki/Occam%27s_razor
+
+
+**Key points:**
+
+- Keep it simple.
+- Remove collinearity.
+- There are basically 3 methods for feature selection:
+  1. **Filter Methods:** takes advantage of the correlation between variables and its types (numerical and categorical).
+
+  ![](img/6_filter_methods.png)
+
+  2. **Embedded Methods:** takes advantage of algorithms, such as: Random Forest, Lasso Regression and Ridge Regression.
+  
+  3. **Wrapper Methods:** it's a process and we can make use of Boruta's algorithm.
+
+In this project, we used the **Wrapper Method** because we wanted to see Boruta's algorithm in action and it's a good method to confront later with our hypotheses.
+
+By running Boruta for our dataset, the algorithm considers the following features as relevant:
+
+```python
+['store', 
+'promo', 
+'store_type', 
+'assortment',
+'competition_distance', 
+'competition_open_since_month',
+'competition_open_since_year',
+'promo2', 
+'promo2_since_week',
+'promo2_since_year',
+'competition_time_month', 
+'promo_time_week',
+'day_of_week_sin',
+'day_of_week_cos',
+'month_cos',
+'day_sin',
+'day_cos', 
+'week_of_year_cos']
+```
+Comparing the columns between the ones that we outlined in the conclusion from our hypothesis and the ones that Boruta suggested, we can see some differences.
+
+However, this is not a problem, **since we are working in an iterative process (CRISP-DS)**. We can first test the model using only the features that Boruta suggested, then include the one by one from our hypothesis and test to see what happens.
+
+We'll include: `month_sin`, `week_of_year_sin`. In addition, we had dropped `date` and `sales` because the first will be inevitably used by the ML model as we are going to predict the later, so we have to include them back too.
+
+So, the final set of selected features are:
+
+```python
+['store',
+ 'promo',
+ 'store_type',
+ 'assortment',
+ 'competition_distance',
+ 'competition_open_since_month',
+ 'competition_open_since_year',
+ 'promo2',
+ 'promo2_since_week',
+ 'promo2_since_year',
+ 'competition_time_month',
+ 'promo_time_week',
+ 'day_of_week_sin',
+ 'day_of_week_cos',
+ 'month_sin',
+ 'month_cos',
+ 'day_sin',
+ 'day_cos',
+ 'week_of_year_sin',
+ 'week_of_year_cos',
+ 'date',
+ 'sales']
+```
 
 [back to top](#table-of-contents)
