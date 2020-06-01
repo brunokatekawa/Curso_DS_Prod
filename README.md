@@ -20,6 +20,8 @@
 
 - [Module 06. Feature Selection](#module-06-feature-selection)
 
+- [Module 07. Machine Learning Modeling](#module-07-machine-learning-modeling)
+
 ---
 
 ## Introduction
@@ -645,3 +647,51 @@ So, the final set of selected features are:
 ```
 
 [back to top](#table-of-contents)
+
+<br>
+
+---
+
+## Module 07. Machine Learning Modeling
+In this module, we get to learn the different types of Machine Learning (**Supervised, Unsupervised and Semi-Supervised**), why and when to apply each one. In addition, we apply different supervised learning models (**Average, Linear Regression, Lasso Regression, Random Forest Regression and XGBoost Regression**) to compare their performances and apply **Cross validation** to help us decide which model we're going to use for our predictions.
+
+**Key points:**
+
+- Set the Average model as your baseline.
+
+-  Start by the simplest models which are Linear Regression and Lasso Regression.
+
+- Then, go for the next level of complexity: Random Forest and XGBoost.
+
+- Avoid overfitting by applying Cross Validation training and tests.
+
+### 7.1 Comparing models' performance
+In this first comparison, before Cross Validation, we divided our dataset in two: training and test datasets.
+
+- For **training**, we separated all the records before the last 6 weeks of the dataset. 
+- For **test**, the records from the last 6 weeks of the dataset.
+
+These were the results:
+
+![](img/71_comparing_models_performance.png)
+
+ As observed in the results, the **Random Forest Regressor** had the least RMSE (`1010.322344`). However, this doesn't mean that the Random Forest is the final model that we're going to pick for our predictions, because we need to make **cross validation tests** for each model to check their behavior in different data and then pick the right model.
+
+<br>
+
+### 7.2 Cross validation and comparing models' performance
+As the model we're developing is a Time Series model, we need to divide our dataset respecting the time. So for each iteration (`KFold`) of the cross validation, we're getting a different parts of ou dataset based on the records dates.
+
+![](/img/77_Cross_Validation.png)
+
+These were the results:
+
+![](img/72_comparing_models_performance_cv.png)
+
+ As observed in the results, the Random Forest Regressor had the least RMSE (`1256.17 +- 319.33`). However, in this project, we're going to go with fine tuning the **XGBoost Regressor** to check the results.
+
+[back to top](#table-of-contents)
+
+<br>
+
+---
