@@ -728,6 +728,8 @@ As we can see, the there was a great improvement compared to the previous result
 
 |  | Before Fine Tuning | After Fine Tuning |
 | --------------- | --------------- | --------------- |
+| MAE | `6683.759428` | `764.744651` |
+| MAPE | `0.949487` | `0.115106` |
 | RMSE | `7331.077173` | `1099.467978` |
 
 [back to top](#table-of-contents)
