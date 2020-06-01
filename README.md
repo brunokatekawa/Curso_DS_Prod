@@ -22,6 +22,8 @@
 
 - [Module 07. Machine Learning Modeling](#module-07-machine-learning-modeling)
 
+- [Module 08. Hyperparameter Fine Tuning](#module-08-hyperparameter-fine-tuning)
+
 ---
 
 ## Introduction
@@ -665,6 +667,8 @@ In this module, we get to learn the different types of Machine Learning (**Super
 
 - Avoid overfitting by applying Cross Validation training and tests.
 
+<br>
+
 ### 7.1 Comparing models' performance
 In this first comparison, before Cross Validation, we divided our dataset in two: training and test datasets.
 
@@ -689,6 +693,42 @@ These were the results:
 ![](img/72_comparing_models_performance_cv.png)
 
  As observed in the results, the Random Forest Regressor had the least RMSE (`1256.17 +- 319.33`). However, in this project, we're going to go with fine tuning the **XGBoost Regressor** to check the results.
+
+[back to top](#table-of-contents)
+
+<br>
+
+---
+
+## Module 08. Hyperparameter Fine Tuning 
+In this module, we get to learn what is hyperparameter fine tuning, why do it and three strategies for doing this(**Random Search, Grid Search and Bayesian Search**). The main purpose of doing this is to find the values of each parameter that maximizes the model's performance.
+
+**Key points:**
+
+- It's not recommended to spend too long on this step, since the fine tuning might improve just a little bit the model's performance. However, it's always a good idea to balance this improvement to the impact that will cause on the business.
+
+<br>
+
+### 8.1 Advantages and disadvantages of each strategy
+
+| Strategy | Advantage | Disadvantage |
+| --------------- | --------------- | --------------- |
+| Random Search | Easy to implement and has low cost | You may never be able to find the best set of values that maximizes model's performance. |
+| Grid Search | It finds the right values (or something very near).   | It might takes forever to calculate and has high cost. |
+| Bayesian Search | Defines the values for the hyperparameters based on past learning. | High complexity to learn how to implement it. |
+
+<br>
+
+### 8.2 The results
+In this project, as I mentioned earlier, we did the fine tuning for the **XGBoost Regressor**. In addition, I also mentioned that the fine tuning might improve the model's performance by just a little bit. However, we've applied the **Random Search** strategy and got some very interesting results.
+
+![](img/82_hyperparamenter_results.png)
+
+As we can see, the there was a great improvement compared to the previous results. 
+
+|  | Before Fine Tuning | After Fine Tuning |
+| --------------- | --------------- | --------------- |
+| RMSE | `7331.077173` | `1099.467978` |
 
 [back to top](#table-of-contents)
 
