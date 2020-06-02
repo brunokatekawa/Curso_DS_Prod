@@ -131,3 +131,5 @@ dmypy.json
 # MacOS trash files
 .DS_Store
 data/store_data_df6.zip
+data/store_data_df5.csv
+data/store_data_df6.csv

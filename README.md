@@ -1,4 +1,7 @@
 # Data Science in Production course
+
+![](img/project_banner.png)
+
 ---
 
 ## Table of contents
@@ -23,6 +26,14 @@
 - [Module 07. Machine Learning Modeling](#module-07-machine-learning-modeling)
 
 - [Module 08. Hyperparameter Fine Tuning](#module-08-hyperparameter-fine-tuning)
+
+- [Module 09. Error translation and intepretation to business](#module-09-error-translation-and-intepretation-to-business)
+
+- [Module 10. Deploying the model to production](#module-10-deploying-the-model-to-production)
+
+- [Conclusion and lessons learned](#conclusion-and-lessons-learned)
+
+- [Final acknowledgments](#final-acknowledgments)
 
 ---
 
@@ -62,7 +73,11 @@ In addition, we get to learn **CRISP-DS (CRoss-Industry Process - Data Science)*
 > *How might we identify the budget needed for renovations for each store?*
 
 ### Solution statement
-> *We can use time series do predict the sales for each store in the next 42 days (six weeks).*
+> *We can use Time Series do predict the sales for each store in the next 42 days (six weeks).*
+
+### Solution delivery 
+>*The solution will be delivered as a Telegram bot who receives the store Id and repplies with the total amount of sales by the end of the next 6 weeks.*
+
 
 [back to top](#table-of-contents)
 
@@ -737,3 +752,123 @@ As we can see, the there was a great improvement compared to the previous result
 <br>
 
 ---
+
+## Module 09. Error translation and intepretation to business
+In this module, we get to learn how to translate the MAE and MAPE to business language.
+
+**Key points:**
+
+- We need to understand the model's performance in order to be able to tell the C-Level how much money this model will bring to the company.
+
+- Although, the first version of our model will be deployed to production, we need to report to the business that there are stores that are more difficult to make the predictions. Thus, some strategies that may solve this challenge in the next CRISP iteration could be taking a closer look on the variables, try other methods and other techniques in order to improve the predictions. As we can see below:
+
+  ![](img/09_challenging_stores.png)
+
+  ![](img/911_store_analysis.png)
+  
+  **MAPE x error:** the points circled in red are examples of challenging sotres.
+
+<br>
+
+### 9.1 Characteristics of each error metric
+
+- **MAE:**
+  - Assigns equal weight to all errors.
+  - Robust in the presence of outliers, that is, invariable to outliers.
+  - Easy understanding by the business team.
+
+- **MAPE:**
+  - Shows how far the prediction is from the actual value, on average, as a percentage.
+  - Widely used to report the results.
+  - It cannot be used if the response variable contains zero. If you have to predict zero, then you have to use other metrics.
+
+- **RMSE:**
+  - It gives a lot of weight to large errors.
+  - Sensitive in the presence of outliers.
+  - Ideal for measuring the machine learning model's performance.
+
+<br>
+
+### 9.2 Machine Learning Performance
+
+![](img/93_ml_performance.png)
+
+Observing the results, we can see that:
+- By observing the **first and second line plots**, we can see that the predictions or our model is pretty close to the real value for `sales`. On the other hand, the error rate has some variance.
+
+- By observing the **histogram**, the error distribution almost follows a normal distribution. 
+
+- By observing the **scatterplot** for the errors, the points seems well fit in a horizontal tube which means that there's a few variation in the error. If the points formed any other shape (e.g opening/closing cone or an arch), this would mean that the errors follows a trend and we would need to review our model.
+
+[back to top](#table-of-contents)
+
+<br>
+
+---
+
+## Module 10. Deploying the model to production
+In this module, we get to learn how to deploy our machine learning model to production environment in order to **make it accessible to any person with a smartphone with Telegram app installed**.
+
+### 10.1 The cloud platform
+For this project, we used [Heroku](https://www.heroku.com) to deploy our model.
+
+<br>
+
+### 10.1 Creating a bot in Telegram
+First, to create our bot, we need to talk to a... bot! Yes, the [**BotFather**](https://telegram.me/BotFather) who is responsible for assisting us in the creation of a bot for Telegram. I won't describe the process in details here because the documentation from Telegram is pretty complete and easy to follow.
+
+Here is the documentation link: https://core.telegram.org/bots#3-how-do-i-create-a-bot
+
+<br>
+
+### 10.2 Telegram bot architecture
+
+![](img/10_telegram_bot_architecture.png)
+
+As pictured, the user sends a message to the bot containing the `store_id` which sends it to the **Rossmann API** which parses the message to extract the `store_id` and loads the **Test dataset**, then it calls a method from the Handler API sending the data. The **Handler API** makes all the operations on the data (cleaning, feature engineering, data preparation, modelo loading and prediction), then it returns the prediction to the Rossmann API which gets the returned data from the Handler API, formats it in a comprehensivable message to be sent to the user.
+
+To get more info about the **Telegram's bot API**, please visit https://core.telegram.org/bots/api
+
+<br>
+
+### 10.3 Prediction in action
+As the commands in Telegram bot starts with '`/`', we need to include it in the message sent to the bot. Example: "`/42`" (which is telling the bot to send us the predictions for the store whose `store_id` is `42`). 
+
+![](img/rossmann_bot.gif)
+
+[back to top](#table-of-contents)
+
+<br>
+
+---
+
+## Conclusion and lessons learned
+The key takeaways from this course were:
+
+- The **CRISP** approach to Data Science projects helps you keep track of each step of the project. In addition, it makes the Data Science **process easy to understand and transparent to all the stakeholders**.
+
+- The **business understanding** is really crucial to the success of the project, because it enables the team to focus on solving the root cause of the problem. It may take longer to start having our hands dirty on the data, but **it really pays off**.
+
+- The **EDA** should not be neglected, since it's the core of our analysis and helps us choose **the right features** to include in our ML model. In addition, it gives us the power to accept and/or reject hypotheses and question the *status quo*.
+
+- When Machine Learning modeling, **always start simple**. Don't try to be too fancy, otherwise, you'll get lost in unnecessary complexity that could be avoided and saving a lot of time which, by the end of the day, it translates into **saving money**.
+
+- **Have something tangible** to show your client the results of all the effort you team went through in order to solve the business problem. In this project, we did it by making a Telegram Bot.
+
+[back to top](#table-of-contents)
+
+<br>
+
+---
+
+## Final acknowledgments
+
+I want to give special thanks to **Meigarom** who supported me as a true mentor and a friend. He is an amazing person who is always willing to help people. I look forward to have more courses designed by him. If you want to know more about Meigarom, check hist [YouTube](https://www.youtube.com/channel/UCar5Cr-pVz08GY_6I3RX9bA) channel and [LinkedIn](https://www.linkedin.com/in/meigarom/).
+
+It was a really amazing arc in the journey for Data Science. I'm glad that I decided to document this project to share with you all.
+
+I also want to thank you, reader, who invested your time to read through this project report.
+
+Also, be sure to connect with [me on LinkedIn](https://www.linkedin.com/in/brunokatekawa/). Let's share our knowledge and learn with each other!
+
+[back to top](#table-of-contents)
