@@ -836,10 +836,6 @@ As the commands in Telegram bot starts with '`/`', we need to include it in the 
 
 ![](img/rossmann_bot.gif)
 
-Check the video on YouTube too!
-
-[![](http://img.youtube.com/vi/5HIMv8al3Hk/0.jpg)](http://www.youtube.com/watch?v=5HIMv8al3Hk)
-
 [back to top](#table-of-contents)
 
 <br>
