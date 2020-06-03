@@ -81,11 +81,15 @@ def parse_message(message):
 
     store_id = store_id.replace('/', '')
 
-    try:
-        store_id = int(store_id)
+    if(store_id != 'start'):
+        try:
+            store_id = int(store_id)
 
-    except ValueError:
-        store_id = 'error'
+        except ValueError:
+            store_id = 'error'
+
+    else:
+        store_id = 'start'
 
     return chat_id, store_id
 
@@ -100,7 +104,7 @@ def index():
         # parses message comming from json
         chat_id, store_id = parse_message(message)
 
-        if store_id != 'error':
+        if (store_id != 'error' and store_id != 'start'):
             # loads data
             data = load_dataset(store_id)
 
@@ -113,7 +117,7 @@ def index():
                 d2 = d1[['store', 'prediction']].groupby('store').sum().reset_index()
                 
                 # sends message
-                msg = 'Store Number {} will sell R${:,.2f} in the next 6 weeks'.format(
+                msg = 'The estimated total amount of sales, by the end of the next 6 weeks, for the store number {} is US${:,.2f}'.format(
                         d2['store'].values[0], 
                         d2['prediction'].values[0])
                 
@@ -121,11 +125,15 @@ def index():
                 return Response('OK', status=200)
 
             else:
-                send_message(chat_id, 'Store not available')
+                send_message(chat_id, 'This store number does not exist. Please, enter another store number. Example: /42')
                 return Response('OK', status=200)
 
+        elif(store_id == 'start'):
+            send_message(chat_id, 'Hello! It is a great day to do business!')
+            return Response('OK', status=200)
+
         else:
-            send_message(chat_id, 'Store ID is wrong')
+            send_message(chat_id, 'Incorrect store number. Please enter a store number. Example: /42')
             return Response('OK', status=200)
 
     else:
