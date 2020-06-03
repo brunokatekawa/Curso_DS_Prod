@@ -42,23 +42,25 @@
 ## Introduction
 This is a book-like write up to register the progress of my journey through the course. But wait, what is the "Data Science in Production" course?
 
-It's a course designed by [Meigarom Lopes](https://github.com/Meigarom), a brazilian Data Scientist who is passionate about Data Science and for our luck (at least mine) designed this amazing course where he teaches Data Science and Machine Learning and how to deploy the model in production environment. You can get more details about the course [here](https://sejaumdatascientist.com/como-ser-um-data-scientist/) which I recommend you to do it.
+It's a course designed by [Meigarom Lopes](https://github.com/Meigarom), a Brazilian Data Scientist who is passionate about Data Science. For our luck, or at least mine, he designed this amazing course where he teaches Data Science and Machine Learning and how to deploy the model in the production environment. 
 
-So, after telling you this, let's start.
+You can get more details about the course [here](https://sejaumdatascientist.com/como-ser-um-data-scientist/), which I recommend you to check it out.
+
+So, after telling you all this, let's start.
 
 <br>
 
 ---
 
 ## The dataset
-In this course, we use the [Rossmann Store Sales](https://www.kaggle.com/c/rossmann-store-sales) dataset from Kaggle. I'll leave you to check the dataset.
+In this course, we used the [Rossmann Store Sales](https://www.kaggle.com/c/rossmann-store-sales) dataset from Kaggle. I'll leave you to check the dataset.
 
 <br>
 
 ---
 
 ## Module 01. Understanding the business problem
-In this module, we get to understand how important is to first understand the business as a whole and find the root cause of the problem that the stakeholder want us to solve.
+In this module, we get to learn how important is to first understand the business as a whole and to find the root cause of the problem that the stakeholders want us to solve.
 
 **Key points:**
 - Understand the context.
