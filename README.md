@@ -33,21 +33,27 @@
 
 - [Conclusion and lessons learned](#conclusion-and-lessons-learned)
 
+- [Next steps](#next-steps)
+
 - [Final acknowledgments](#final-acknowledgments)
 
 ---
 
 ## Introduction
-This is a journal-like write up to register the progress of my journey through the course. But wait, what is the "Data Science in Production" course?
+This is a book-like write up to register the progress of my journey through the course. But wait, what is the "Data Science in Production" course?
 
 It's a course designed by [Meigarom Lopes](https://github.com/Meigarom), a brazilian Data Scientist who is passionate about Data Science and for our luck (at least mine) designed this amazing course where he teaches Data Science and Machine Learning and how to deploy the model in production environment. You can get more details about the course [here](https://sejaumdatascientist.com/como-ser-um-data-scientist/) which I recommend you to do it.
 
 So, after telling you this, let's start.
 
+<br>
+
 ---
 
 ## The dataset
 In this course, we use the [Rossmann Store Sales](https://www.kaggle.com/c/rossmann-store-sales) dataset from Kaggle. I'll leave you to check the dataset.
+
+<br>
 
 ---
 
@@ -70,16 +76,27 @@ In addition, we get to learn **CRISP-DS (CRoss-Industry Process - Data Science)*
 - Map all the possible problems thay we may find during the project development.
 
 ### Problem statement
+This statement was defined after identifying the root cause of the problem and interviwed the stakeholders to understand the business as a whole. 
+
 > *How might we identify the budget needed for renovations for each store?*
 
+<br>
+
 ### Solution statement
+This statement was defined after doing the Exploratory Data Analysis, since this phase gives us a clear business overview. 
+
 > *We can use Time Series do predict the sales for each store in the next 42 days (six weeks).*
 
+<br>
+
 ### Solution delivery 
+The solution delivery was outlined in a cocreation workshop with the stakeholders.
+
 >*The solution will be delivered as a Telegram bot who receives the store Id and repplies with the total amount of sales by the end of the next 6 weeks.*
 
-
 [back to top](#table-of-contents)
+
+<br>
 
 ---
 
@@ -112,6 +129,8 @@ In this module, we start getting familiar with the dataset to **understand how c
 
 [back to top](#table-of-contents)
 
+<br>
+
 ---
 
 ## Module 03. Feature Engineering
@@ -141,6 +160,8 @@ In this module, we learn how to create a mindmap that helps us to **decide which
   - **Variable selection:** picking the most relevant variables for the model. Considers the correlations between variables. It does not take into account business rules.
 
 [back to top](#table-of-contents)
+
+<br>
 
 ---
 
@@ -461,6 +482,8 @@ As observed in the results, the correlation coefficient between `store_type` and
 
 [back to top](#table-of-contents)
 
+<br>
+
 ---
 
 ## Module 05. Data Preparation
@@ -716,7 +739,7 @@ These were the results:
 ---
 
 ## Module 08. Hyperparameter Fine Tuning 
-In this module, we get to learn what is hyperparameter fine tuning, why do it and three strategies for doing this(**Random Search, Grid Search and Bayesian Search**). The main purpose of doing this is to find the values of each parameter that maximizes the model's performance.
+In this module, we get to learn what is hyperparameter fine tuning, why do it and three strategies for doing this (**Random Search, Grid Search and Bayesian Search**). The main purpose of doing this is to find the values of each parameter that maximizes the model's performance.
 
 **Key points:**
 
@@ -842,7 +865,7 @@ As the commands in Telegram bot starts with '`/`', we need to include it in the 
 
 ---
 
-## Conclusion and lessons learned
+## Wrap up and lessons learned
 The key takeaways from this course were:
 
 - The **CRISP** approach to Data Science projects helps you keep track of each step of the project. In addition, it makes the Data Science **process easy to understand and transparent to all the stakeholders**.
@@ -856,6 +879,18 @@ The key takeaways from this course were:
 - **Have something tangible** to show your client the results of all the effort you team went through in order to solve the business problem. In this project, we did it by making a Telegram Bot.
 
 [back to top](#table-of-contents)
+
+<br>
+
+---
+
+## Next steps
+
+- Experiment with other Machine Learning algorithms to improve business performance.
+
+- Experiment with selecting other features to see how much the RMSE is impacted.
+
+- Experiment with other hyperparameter fine tuning strategies to see how much the RMSE is impacted.
 
 <br>
 
