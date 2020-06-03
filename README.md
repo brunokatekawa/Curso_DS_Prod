@@ -834,7 +834,7 @@ To get more info about the **Telegram's bot API**, please visit https://core.tel
 ### 10.3 Prediction in action
 As the commands in Telegram bot starts with '`/`', we need to include it in the message sent to the bot. Example: "`/42`" (which is telling the bot to send us the predictions for the store whose `store_id` is `42`). 
 
-![](img/rossmann_bot.gif)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5HIMv8al3Hk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 [back to top](#table-of-contents)
 
