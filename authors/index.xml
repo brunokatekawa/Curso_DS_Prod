@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on Bruno Katekawa</title>
+    <link>https://brunokatekawa.github.io/ds_portfolio/authors/</link>
+    <description>Recent content in Authors on Bruno Katekawa</description>
+    <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    
+	    <atom:link href="https://brunokatekawa.github.io/ds_portfolio/authors/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://brunokatekawa.github.io/ds_portfolio/authors/admin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://brunokatekawa.github.io/ds_portfolio/authors/admin/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m a Data Scientist who has worked for companies of various sizes, from startups to multinationals where I had extensive experience with Information Technology and User Experience, extracting the maximum potential from these areas to deliver the greatest possible value to the businesses.&lt;/p&gt;
+&lt;p&gt;In addition, I&amp;rsquo;ve collaborated with projects that positively impacted hundreds of thousands of people that use banking services (retail, corporate and private), telecoms services and health insurance services.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>machine learning on Bruno Katekawa</title>
+    <link>https://brunokatekawa.github.io/ds_portfolio/tags/machine-learning/</link>
+    <description>Recent content in machine learning on Bruno Katekawa</description>
+    <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="https://brunokatekawa.github.io/ds_portfolio/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rossmann stores sales prediction</title>
+      <link>https://brunokatekawa.github.io/ds_portfolio/project/rossmann-sales/</link>
+      <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://brunokatekawa.github.io/ds_portfolio/project/rossmann-sales/</guid>
+      <description>&lt;p&gt;A complete project done in a Data Science and Machine Learning course.&lt;/p&gt;
+&lt;p&gt;In the course, we learn the lifecycle of a Data Science project. Starting from understanding the business problem, going through the solution development and finally doing full deployment to the production environment.&lt;/p&gt;
+&lt;p&gt;The final solution is a Telegram bot that makes total sales predictions for any given store. The underlying Machine Learning algorithm learned from a dataset containing 1,115 stores and more than 1 million sales records.&lt;/p&gt;
+&lt;p&gt;We used:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;li&gt;Pandas&lt;/li&gt;
+&lt;li&gt;Seaborn&lt;/li&gt;
+&lt;li&gt;Scikit-learn&lt;/li&gt;
+&lt;li&gt;Flask&lt;/li&gt;
+&lt;li&gt;Telegram bot API&lt;/li&gt;
+&lt;li&gt;Heroku&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Check full project documentation at GitHub: &lt;a href=&#34;https://github.com/brunokatekawa/Curso_DS_Prod&#34;&gt;https://github.com/brunokatekawa/Curso_DS_Prod&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
