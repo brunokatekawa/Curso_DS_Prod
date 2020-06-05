@@ -31,7 +31,7 @@
 
 - [Module 10. Deploying the model to production](#module-10-deploying-the-model-to-production)
 
-- [Conclusion and lessons learned](#conclusion-and-lessons-learned)
+- [Wrap up and lessons learned](#wrap-up-and-lessons-learned)
 
 - [Next steps](#next-steps)
 
