@@ -5,7 +5,7 @@
 ---
 
 ## Before you start
-You can read the short and more **business oriented story** in this link:
+You can read the shorter and more **business oriented story** in this link:
 
 https://github.com/brunokatekawa/RossmannSales
 
